@@ -1,0 +1,60 @@
+$font-light: 'Montserrat Light';
+$font-light-italic: 'Montserrat Light Italic';
+$font-regular: 'Montserrat Regular';
+$font-regular-italic: 'Montserrat Regular Italic';
+$font-semibold: 'Montserrat SemiBold';
+$font-semibold-italic: 'Montserrat SemiBold Italic';
+$typography-main: $font-light;
+$typography-heading: $font-light;
+
+@include setRelativeType();
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: $typography-main;
+    color: $color-text-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+    font-family: $typography-heading;
+    font-weight: inherit;
+}
+
+a {
+    @extend strong;
+}
+
+ul,
+ol {
+    padding-left: 1rem;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+dt {
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+em {
+    font-style: $font-semibold-italic;
+}
+
+strong {
+    font-weight: $font-semibold;
+}

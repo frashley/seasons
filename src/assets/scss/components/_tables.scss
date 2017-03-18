@@ -1,0 +1,70 @@
+.pae-table-container, .table-container {
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+table {
+	width: 100%;
+
+	tr {
+		border-top: 1px solid $table-border-color;
+
+		&:hover {
+			background: $table-background-hover;
+		}
+
+		th {
+			color: $grey;
+			font-size: 0.75rem;
+			text-align: left;
+			text-transform: uppercase;
+			padding: 10px;
+		}
+ 
+		td {
+			color: $black;
+			padding: 10px;
+		}
+	}
+
+	&.pae-table-stacked-horizontal, &.table-stacked-horizontal {
+		thead {
+			display: none;
+		}
+
+		td {
+			display: block;
+			clear: both;
+			overflow: hidden;
+			text-align: right;
+			margin: 0;
+
+			&:before {
+				content: attr(data-label);
+				color: $grey;
+				font-size: 0.75rem;
+				float: left;
+				text-transform: uppercase;
+				display: block;
+			}
+		}
+
+		@include mediaQuery(map-get($grid-breakpoints, medium)) {
+			thead {
+				display: table-header-group;
+				width: 100%;
+			}
+			td {
+				display: table-cell;
+				clear: none;
+				overflow: visible;
+				text-align: left;
+				margin: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}

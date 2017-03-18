@@ -1,0 +1,338 @@
+// TODO: clean up inline option
+%picker {
+    background-color: $white;
+    border: 1px solid $color-border;
+    box-shadow: 0 0 4px 0 $color-border;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+%arrow {
+    border-style: solid;
+    display: inline-block;
+    transform: rotate(360deg);
+}
+
+%arrow-up {
+    border-color: transparent transparent $color-primary-light transparent;
+    border-width: 0 8px 8px 8px;
+
+    &:hover,
+    &:focus {
+        border-color: transparent transparent $white transparent;
+    }
+}
+
+%arrow-right {
+    border-color: transparent transparent transparent $grey;
+    border-width: 8px 0 8px 8px;
+
+    &:hover,
+    &:focus {
+        border-color: transparent transparent transparent $color-primary-light;
+    }
+}
+
+%arrow-down {
+    border-color: $color-primary-light transparent transparent transparent;
+    border-width: 8px 8px 0 8px;
+
+    &:hover,
+    &:focus {
+        border-color: $white transparent transparent transparent;
+    }
+}
+
+%arrow-left {
+    border-color: transparent $grey transparent transparent;
+    border-width: 8px 8px 8px 0;
+
+    &:hover,
+    &:focus {
+        border-color: transparent $color-primary-light transparent transparent;
+    }
+}
+
+.pae-arrow-up, .arrow-up {
+    @extend %arrow;
+    @extend %arrow-up;
+}
+
+.pae-arrow-down, .arrow-down {
+    @extend %arrow;
+    @extend %arrow-down;
+}
+
+.pae-datepicker-container, .datepicker-container {
+    margin-bottom: 12px;
+    max-width: 480px;
+    position: relative;
+
+    .pae-datepicker-icon, .datepicker-icon {
+        color: $color-primary;
+        position: absolute;
+        right: 12px;
+        top: 39px;
+    }
+
+    .pae-isjs-datepicker, .isjs-datepicker {
+        padding-right: 40px;
+    }
+
+    &.pae-inline, &.inline {
+        .pae-datepicker, .datepicker,
+        .pae-timepicker, .timepicker {
+            position: static;
+        }
+    }
+}
+
+.pae-timepicker, .timepicker {
+    @extend %picker;
+
+    align-items: center;
+    background-color: $color-primary;
+    border-radius: 8px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
+    &.pae-hidden, &.hidden {
+        position: absolute;
+        left: -9999em;
+    }
+
+    .pae-control, .control {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0.5rem;
+    }
+
+    .pae-ampm, .ampm { 
+        display: flex;
+        padding-left: 0.5rem;
+    }
+
+    .pae-isjs-am, .isjs-am,
+    .pae-isjs-pm, .isjs-pm {
+        @extend .text;
+
+        color: $color-primary-light;
+        cursor: pointer;
+        padding: 0 0.25rem;
+    }
+
+    .pae-text, .text {
+        @include setType(32, 0);
+
+        display: block;
+
+        &.active {
+            color: $white;
+        }
+    }
+
+    .pae-isjs-hour, .isjs-hour,
+    .pae-isjs-minute, .isjs-minute {
+        @extend .text;
+    }
+
+    .pae-footer, .footer {
+        background-color: $white;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.pae-datepicker, .datepicker {
+    @extend %picker;
+
+    border-radius: 8px;
+
+    &.pae-hidden, &.hidden {
+        position: absolute;
+        left: -9999em;
+    }
+
+    .pae-timepicker, .timepicker {
+        border: 0;
+        box-shadow: none;
+        padding: 2rem;
+        position: static;
+    }
+
+    .pae-header, .header {
+        align-items: center;
+        background: $color-primary;
+        color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+
+    .pae-isjs-datepicker-heading, .isjs-datepicker-heading {
+        @extend h2;
+    }
+
+    .pae-toggle-date-time, .toggle-date-time {
+        @extend .button-group;
+
+        justify-content: center;
+        margin-top: 24px;
+
+        .pae-btn, .btn {
+            box-shadow: none;
+        }
+    }
+
+    .pae-year-container, .year-container {
+        flex-shrink: none;
+        margin-left: auto;
+    }
+
+    .pae-select-container, .select-container {
+        &:before,
+        &:after {
+            border-left: 4px solid $color-primary;
+            border-right: 4px solid $color-primary;
+        }
+
+        &:before {
+            border-bottom: 5px solid $white;
+        }
+
+        &:after {
+            border-top: 5px solid $white;
+        }
+    }
+
+    .pae-isjs-year, .isjs-year {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        color: $white;
+    }
+
+    .pae-month-switcher, .month-switcher {
+        align-items: center;
+        display: flex;
+        padding: 0 1rem;
+
+        .pae-header, .heading {
+            @extend p;
+
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    .pae-isjs-datepicker-previous, .isjs-datepicker-previous {
+        align-items: center;
+        display: flex;
+    }
+
+    .pae-isjs-datepicker-next, .isjs-datepicker-next {
+        @extend .isjs-datepicker-previous;
+    }
+
+    .pae-prev-icon, .prev-icon {
+        @extend %arrow;
+        @extend %arrow-left;
+    }
+
+    .pae-next-icon, .next-icon {
+        @extend %arrow;
+        @extend %arrow-right;
+    }
+
+    .pae-calendar, .calendar {
+        color: $grey;
+        text-align: center;
+
+        tr {
+            border: 0;
+
+            &:hover,
+            &:focus {
+                background: $white;
+            }
+
+            &:last-child {
+                th,
+                td {
+                    padding-bottom: 12px;
+                }
+            }
+        }
+
+        th {
+            color: $color-primary-light;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 0.25rem;
+
+            &:hover,
+            &:focus {
+                .pae-isjs-day, .isjs-day {
+                    background-color: $color-primary-lighter;
+                }
+
+                &.pae-isjs-disabled-text, &.isjs-disabled-text {
+                    color: $grey;
+                }
+            }
+        }
+    }
+
+    .pae-carlendar-footer, .calendar-footer {
+        align-items: center;
+        border-top: 1px solid $color-border;
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .pae-calendar-action, .calendar-action {
+        display: inline-block;
+        flex: 1;
+    }
+
+    .pae-isjs-day, .isjs-day {
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .pae-isjs-disabled-text, .isjs-disabled-text {
+        color: $color-disabled-text;
+    }
+
+    .pae-isjs-is-today, .isjs-is-today {
+        .pae-isjs-day, .isjs-day {
+            background-color: $color-primary-lighter;
+        }
+    }
+
+    .pae-isjs-is-selected, .isjs-is-selected {
+        .pae-isjs-day, .isjs-day {
+            background-color: $color-primary;
+            color: $white;
+        }
+
+        &:hover,
+        &:focus {
+            .pae-isjs-day, .isjs-day {
+                color: $grey;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('#{$static-font-path}/montserrat/montserrat-light.eot'); /* IE9 Compat Modes */
+  src: url('#{$static-font-path}/montserrat/montserrat-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$static-font-path}/montserrat/montserrat-light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('#{$static-font-path}/montserrat-light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$static-font-path}/montserrat-light.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat Light Italic';
+  src: url('#{$static-font-path}/montserrat/montserrat-lightitalic.eot'); /* IE9 Compat Modes */
+  src: url('#{$static-font-path}/montserrat/montserrat-lightitalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$static-font-path}/montserrat/montserrat-lightitalic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-lightitalic.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-lightitalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('#{$static-font-path}/montserrat/montserrat-regular.eot'); /* IE9 Compat Modes */
+  src: url('#{$static-font-path}/montserrat/montserrat-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$static-font-path}/montserrat/montserrat-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat Regular Italic';
+  src: url('#{$static-font-path}/montserrat/montserrat-italic.eot'); /* IE9 Compat Modes */
+  src: url('#{$static-font-path}/montserrat/montserrat-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$static-font-path}/montserrat/montserrat-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-italic.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url('#{$static-font-path}/montserrat/montserrat-semibold.eot'); /* IE9 Compat Modes */
+  src: url('#{$static-font-path}/montserrat/montserrat-semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$static-font-path}/montserrat/montserrat-semibold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-semibold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-semibold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold Italic';
+  src: url('#{$static-font-path}/montserrat/montserrat-semibolditalic.eot'); /* IE9 Compat Modes */
+  src: url('#{$static-font-path}/montserrat/montserrat-semibolditalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$static-font-path}/montserrat/montserrat-semibolditalic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-semibolditalic.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$static-font-path}/montserrat/montserrat-semibolditalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+// Font Classes
+.font-light {
+  font-family: $font-light;
+}
+
+.font-light-italic {
+  font-family: $font-light-italic;
+}
+
+.font-regular {
+  font-family: $font-regular;
+}
+
+.font-regular-italic {
+  font-family: $font-regular-italic;
+}
+
+.font-semibold {
+  font-family: $font-semibold;
+}
+
+.font-semibold-italic {
+  font-family: $font-semibold-italic;
+}

@@ -1,0 +1,95 @@
+.pae-lookup, .lookup {
+    position: relative; 
+
+    .pae-lookup-field, .lookup-field {
+        padding-right: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .pae-lookup-icon, .lookup-icon {
+        position: absolute;
+        right: 1rem;
+        top: 20px;
+        z-index: 3;
+    }
+
+    .pae-lookup-results, .lookup-results {
+        background: $field-background-color;
+        border: 1px solid $field-border-color;
+        border-top: 0;
+        box-shadow: 0 2px 6px $field-border-color;
+        list-style: none;
+        margin-top: -7px;
+        padding: 0;
+        position: relative;
+        top: 0;
+        z-index: 1;
+
+        .pae-item, .item {
+            border-top: 1px solid $field-border-color;
+        }
+
+        .pae-action, .action {
+            display: block;
+            padding: 0 1.5rem;
+
+            &:hover,
+            &:focus {
+                background-color: $color-primary-lightest;
+            }
+        }
+
+        .pae-active, .active {
+            padding-top: 12px;
+
+            .pae-action, .action {
+                background-color: $color-primary-lightest;
+            }
+        }
+
+        .pae-heading, .heading {
+            color: $color-accent-one;
+            font-size: 18px;
+            margin: 0 0 $typesetter-baseline / 4 + px 0;
+            padding-top: $typesetter-baseline / 2 + px;
+
+            + * {
+                margin-top: $typesetter-baseline / 2 + px;
+            }
+        }
+
+        .pae-description, .description {
+            color: $grey;
+            font-size: 12px;
+            margin-bottom: 0;
+            margin-top: $typesetter-baseline / 4 + px;
+            padding-bottom: $typesetter-baseline / 2 + px;
+        }
+
+        .pae-media, .media {
+            padding: 0.5rem 0;
+
+            + * {
+                margin-top: 0;
+            }
+
+            .pae-content,
+            .content,
+            .pae-content > *,
+            .content > * {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+         @include mediaQuery(map-get($grid-breakpoints, small)) {
+            max-height: $typesetter-baseline * 10 + px;
+            overflow: hidden;
+            overflow-y: scroll;
+            position: absolute;
+            top: $typesetter-baseline * 2 + px;
+        }
+    }
+}

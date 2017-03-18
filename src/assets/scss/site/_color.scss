@@ -1,0 +1,144 @@
+
+.color-palette {
+	margin: 0 -1% !important;
+
+	.item {
+		flex-basis: 50% !important;
+		padding: 0 1% 20px 1% !important;
+	}
+
+	@include mediaQuery(map-get($grid-breakpoints, medium)) {
+		.item {
+			flex-basis: 25% !important;
+		}
+	}
+
+	.color {
+		width: 100%;
+		height: 120px;
+		margin-bottom: 12px;
+
+		&.primary {
+			background: $color-primary;
+		}
+
+		&.primary-light {
+			background: $color-primary-light;
+		}
+
+		&.primary-lighter {
+			background: $color-primary-lighter;
+		}
+
+		&.primary-lightest {
+			background: $color-primary-lightest;
+			border: 1px solid $color-primary-light;
+		}
+
+		&.black {
+			background: $black;
+		}
+
+		&.grey {
+			background: $grey;
+		}
+
+		&.color-accent-one {
+			background: $color-accent-one;
+		}
+
+		&.color-accent-two {
+			background: $color-accent-two;
+		}
+
+		&.color-accent-three {
+			background: $color-accent-three;
+		}
+
+		&.primary-container {
+			height: 240px;
+		}
+	}
+
+	.color-info {
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+	}
+
+	&.notifications {
+		.item {
+			flex-basis: 100% !important;
+		}
+
+		@include mediaQuery(map-get($grid-breakpoints, medium)) {
+			.item {
+				flex-basis: 33.333% !important;
+			}
+		}
+
+		.color {
+			height: 140px;
+			margin: 0;
+
+			&.error {
+				background: $color-state-error;
+			}
+
+			&.error-dark {
+				height: 15px;
+				background: $color-state-error-dark;
+			}
+
+			&.error-medium {
+				height: 60px;
+				background: $color-state-error-medium;
+			}
+
+			&.error-light {
+				height: 60px;
+				background: $color-state-error-light;
+				margin: 0 0 20px 0;
+			}
+
+			&.info {
+				background: $color-state-info;
+			}
+
+			&.info-dark {
+				height: 15px;
+				background: $color-state-info-dark;
+			}
+
+			&.info-medium {
+				height: 60px;
+				background: $color-state-info-medium;
+			}
+
+			&.info-light {
+				height: 60px;
+				background: $color-state-info-light;
+				margin: 0 0 20px 0;
+			}
+
+			&.success {
+				background: $color-state-success;
+			}
+
+			&.success-dark {
+				height: 15px;
+				background: $color-state-success-dark;
+			}
+
+			&.success-medium {
+				height: 60px;
+				background: $color-state-success-medium;
+			}
+
+			&.success-light {
+				height: 60px;
+				background: $color-state-success-light;
+				margin: 0 0 20px 0;
+			}
+		}
+	}
+}

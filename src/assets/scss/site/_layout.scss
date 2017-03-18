@@ -1,0 +1,78 @@
+body {
+	@include mediaQuery(map-get($grid-breakpoints, medium)) {
+		overflow: hidden;
+	}
+}
+
+.main {
+    @include mediaQuery(map-get($grid-breakpoints, medium)) {
+        display: flex;
+    	align-items: stretch;
+    	height: 100vh;
+
+		&.inside {
+			background: $color-primary-lightest;
+			margin-top: -24px;
+			padding-top: 24px;
+
+			.left-nav {
+				border-right: 1px solid $color-border;
+			}
+
+			.right-panel {
+				overflow: hidden;
+				overflow-y: scroll;
+			}
+		}
+    }
+
+	.left-nav {
+		background: $white;
+		position: relative;
+
+		@include mediaQuery(map-get($grid-breakpoints, medium)) {
+            flex-basis: 100%;
+			flex-basis: 20%;
+			overflow: hidden;
+			overflow-y: scroll;
+			padding-bottom: 24px;
+		}
+	}
+
+	.right-panel {
+		@include mediaQuery(map-get($grid-breakpoints, medium)) {
+			flex-basis: 80%;
+		}
+	}
+}
+
+.patterns {
+	article {
+		display: inline-block;
+		margin-bottom: 30px;
+		width: 100%;
+
+		h5 {
+			border-bottom: 1px solid $color-border;
+			padding: 0 0 12px 0;
+			margin: 0 0 20px 0;
+		}
+
+	}
+}
+
+.half {
+	width: 100%;
+
+	@include mediaQuery(map-get($grid-breakpoints, medium)) {
+		width: 50%;
+	}
+}
+
+.small-container {
+	max-width: 30rem;
+}
+
+.x-small-container {
+	max-width: 25rem;
+}

@@ -1,0 +1,37 @@
+.right-panel {
+	padding: 2rem;
+
+	&.intro {
+		background: $color-primary-lightest;
+	}
+
+	.logo {
+		@include mediaQuery(map-get($grid-breakpoints, medium)) {
+			display: none;
+		}
+	}
+
+	.intro-text {
+		padding-top: 10%;
+		text-align: center;
+
+		@include mediaQuery(map-get($grid-breakpoints, medium)) {
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 5rem;
+			width: 50%;
+		}
+
+		.btn {
+			display: inline-block;
+		}
+	}
+
+	.last-update {
+		display: block;
+		font-size: 0.8rem;
+		font-family: $font-regular-italic;
+		padding: 0;
+	}
+
+}

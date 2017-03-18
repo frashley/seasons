@@ -1,0 +1,41 @@
+.pae-tabbed, .tabbed {
+    position: relative;
+
+    .pae-tabbed-nav, .tabbed-nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .pae-tab-action, .tab-action {
+        border-bottom: 3px solid transparent;
+        color: $color-primary-light;
+        display: block;
+        padding: $typesetter-baseline/4 + px $typesetter-baseline + px;
+
+        &:hover {
+            border-color: $color-primary;
+            color: $color-accent-one;
+        }
+
+        &:focus { 
+            border-color: $grey;
+            color: $color-accent-one;
+        }
+    }
+
+    .pae-tabbed-content, .tabbed-content {
+        @extend .hidden;
+
+        &.active {
+            position: static;
+        }
+    }
+
+    .pae-active, .active {
+        .pae-tab-action, .tab-action {
+            border-color: $color-primary;
+            color: $color-accent-one;
+        }
+    }
+}

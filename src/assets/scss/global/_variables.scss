@@ -1,0 +1,107 @@
+//active
+$color-state-active: #ffffff;
+
+// text
+$color-text-default: $black;
+
+// Buttons
+$button-border-radius: 8px;
+
+// default button
+$color-button-default-bg: $color-accent-one;
+$color-button-default-text: $white;
+
+//default disabled 
+$color-button-default-disabled-border: $color-primary-lighter;
+$color-button-default-disabled-bg: $color-primary-lightest;
+$color-button-default-disabled-text: $color-primary-lighter;
+
+// neutral button
+$color-button-neutral-bg: $color-primary-lightest;
+$color-button-neutral-text: $color-primary;
+$color-button-neutral-border: $color-primary-lighter;
+
+// neutral disabled
+$color-button-neutral-disabled-border: $color-primary-lighter;
+$color-button-neutral-disabled-bg: $color-primary-lighter;
+$color-button-neutral-disabled-text: $white;
+
+//danger button 
+$color-button-error-bg: $color-state-error;
+$color-button-error-text: $white;
+$color-button-error-border: $color-state-error-dark;
+
+//danger disabled
+$color-button-error-disabled-border: $color-state-error-medium;
+$color-button-error-disabled-bg: $color-state-error-light;
+$color-button-error-disabled-text: $color-state-error-medium;
+
+//info button 
+$color-button-info-bg: $color-accent-three;
+$color-button-info-text: $white;
+
+//info disabled
+$color-button-info-disabled-border: $color-state-info-medium;
+$color-button-info-disabled-bg: $color-state-info-light;
+$color-button-info-disabled-text: $color-state-info-medium;
+
+//success button
+$color-button-success-bg: $color-state-success;
+$color-button-success-text: $white;
+$color-button-success-border: $color-state-success-dark;
+
+//success disabled
+$color-button-success-disabled-border: $color-state-success-medium;
+$color-button-success-disabled-bg: $color-state-success-light;
+$color-button-success-disabled-text: $color-state-success-medium;
+
+// utility
+$color-border: $color-primary-light;
+$color-anchor: $color-accent-one;
+$box-shadow: 0 2px 1px 0 rgba(158,163,162,0.3);
+
+// cards
+$card-border-radius: 8px;
+
+// forms
+$field-background-color: $white;
+$field-border-color: $color-primary-light;
+$field-border-radius: 8px;
+$field-text-color: $black;
+$field-arrow-color: $black;
+$field-radio-button-active: $color-primary;
+$field-input-focus-border-color: $color-primary;
+$field-input-focus-box-shadow: 0 0 3px 0 rgba(62,72,70,.2);
+$field-checkbox-active: $color-primary;
+$fieldset-border-color: $color-primary-light;
+
+//modal
+$modal-border-radius: 8px;
+$modal-header-background-color: $color-primary-lightest;
+
+// tables
+$table-border-color: $color-primary-light;
+$table-background-hover: $color-primary-lighter;
+
+// sizes
+$x-small: 5px;
+$small: 10px;
+$medium: 20px;
+$large: 30px;
+$x-large: 40px;
+
+//grid design colors
+$grid-alternate-color-one: $color-primary-lightest; 
+$grid-alternate-color-two: $color-primary-lighter;
+
+// grid settings
+$grid-breakpoints: (
+ 	small: 35.5em, // 600px
+ 	medium: 50em,  // 800px
+ 	large: 64em,   // 1024px
+ 	x-large: 75em  // 1200px
+);
+
+// paths
+$static-font-path: '/assets/fonts' !default;
+$static-image-path: '/assets/images' !default;

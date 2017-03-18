@@ -1,0 +1,24 @@
+.icons-listing {
+    .col {
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 4rem;
+        color: $black;
+        margin: 0 0 1rem 0;
+        display: block;
+    }
+
+    .name-icon { 
+        color: $color-primary;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0 0 0.5rem 0;
+    }
+
+    .class-name {
+        font-size: 0.8rem;
+    }
+
+}

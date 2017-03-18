@@ -1,0 +1,10 @@
+.forms.thirds {
+	.col {
+		flex-basis: 100%;
+		max-width: 100%;
+
+		@include mediaQuery(map-get($grid-breakpoints, medium)) {
+			flex-basis: 33.333%;
+		}
+	}
+}
